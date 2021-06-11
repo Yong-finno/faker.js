@@ -9,7 +9,7 @@
      <title>faker.js - generate massive amounts of fake data in node.js and the browser</title>
      <script src = "js/jquery.js" type = "text/javascript"></script>
      <script src = "js/prettyPrint.js" type = "text/javascript"></script>
-     <script src = "js/faker.js" type = "text/javascript"></script>
+     <script src = "js/faker.js?a" type = "text/javascript"></script>
      <link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
       <script>
 
@@ -92,7 +92,7 @@
             drawButtons();
    
             var _locales = [];
-
+console.log(faker.locales)
             for(var locale in faker.locales) {
               _locales.push({ name: locale, title: faker.locales[locale].title})
             }
@@ -110,7 +110,7 @@
               $('.locale').append('<option value="' + item.name+ '">' + item.title + '</option>');
             });
 
-            $('.locale').val("en");
+            $('.locale').val("th");
 
             $('.locale').change(function(e){
               var locale = $(this).val();
